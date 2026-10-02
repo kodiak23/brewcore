@@ -28,7 +28,7 @@ default:
 build $target_image=image_name $tag=default_tag:
     #!/usr/bin/env bash
     set -euox pipefail
- 
+
     # If running locally, ask user for image choice
     # if [[ $- == *i* ]]; then
     #   IMAGE_CHOICES=(
@@ -441,4 +441,3 @@ _rebuild-bib $target_image $tag $type $config: (build target_image tag) && (_bui
 #       --network-user-mode \
 #       --vsock=false --pass-ssh-key=false \
 #       -i ./output/**/*.{{ type }}
-
